@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Game | Don</title>
+
+<style>
+body {
+    background: #0f172a;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+#gameArea {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin: 20px auto;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #38bdf8;
+    border-radius: 50%;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Bubble Pop Demo 🎯</h1>
+<p>Click bubbles before they disappear!</p>
+
+<div id="gameArea"></div>
+<h2>Score: <span id="score">0</span></h2>
+
+<script>
+
+// JSON-style config (this is what you were thinking 👍)
+const gameConfig = {
+    spawnRate: 800,
+    bubbleSize: 40,
+    speed: 3
+};
+
+let score = 0;
+
+function createBubble() {
+    const bubble = document.createElement("div");
+    bubble.classList.add("bubble");
+
+    const gameArea = document.getElementById("gameArea");
+
+    bubble.style.left = Math.random() * 360 + "px";
+    bubble.style.top = "460px";
+
+    gameArea.appendChild(bubble);
+
+    bubble.onclick = () => {
+        score++;
+        document.getElementById("score").innerText = score;
+        bubble.remove();
+    };
+
+    let position = 460;
+
+    const interval = setInterval(() => {
+        position -= gameConfig.speed;
+        bubble.style.top = position + "px";
+
+        if (position < 0) {
+            bubble.remove();
+            clearInterval(interval);
+        }
+    }, 20);
+}
+
+setInterval(createBubble, gameConfig.spawnRate);
+
+</script>
+
+<br>
+<a href="index.html">← Back to portfolio</a>
+
+</body>
+</html>
