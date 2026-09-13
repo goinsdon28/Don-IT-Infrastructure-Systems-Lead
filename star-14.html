@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STAR Story 14: Secure Triage Workflow Automation — From Concept to Implementation | Don Goins</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>STAR Story 14: Secure Triage Workflow Automation — From Concept to Implementation</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="star-index.html">STAR Stories</a>
+        <a href="journal-index.html">Triage Journal</a>
+    </nav>
+</header>
+
+<div class="container">
+
+<section class="card">
+<span class="eyebrow">Situation</span>
+<h2>Situation</h2>
+<p>While working in a large-scale data-center environment, I became increasingly familiar with the recurring workflow technicians followed when investigating triage tickets.</p>
+<p>The process required technicians to gather information from several sources, interpret device and ticket data, compare expected versus actual conditions, and determine the appropriate next diagnostic action.</p>
+<p>As my understanding of the environment grew, I began recognizing that portions of this workflow could potentially be standardized or automated.</p>
+<p>Earlier in my development, I reconstructed the logical architecture behind portions of the existing triage workflow and began studying how shell commands, queries, Python, structured JSON data, and internal systems could work together.</p>
+<p>That raised a more important engineering question:</p>
+<p><strong>Could I design a workflow that assists technicians with triage while still respecting the access, security, and operational controls required in a production data-center environment?</strong></p>
+</section>
+
+<section class="card">
+<span class="eyebrow">Task</span>
+<h2>Task</h2>
+<p>My objective was not simply to write a script.</p>
+<p>I wanted to determine what would be required to move the idea from a technical proof of concept toward something that could theoretically operate safely within a controlled production environment.</p>
+<p>That meant understanding several layers beyond code:</p>
+<ul>
+<li>Access-control lists</li>
+<li>Authentication</li>
+<li>Authorization</li>
+<li>API access</li>
+<li>Technician versus application permissions</li>
+<li>Service-account requirements</li>
+<li>Read-only versus write permissions</li>
+<li>Data handling restrictions</li>
+<li>Security boundaries</li>
+<li>Change-management requirements</li>
+<li>Logging and accountability</li>
+<li>Organizational approval</li>
+</ul>
+<p>My goal was to separate three things clearly:</p>
+<p><strong>What I could technically build.</strong></p>
+<p><strong>What I was authorized to access.</strong></p>
+<p><strong>What would require formal approval before implementation.</strong></p>
+</section>
+
+<section class="card">
+<span class="eyebrow">Action</span>
+<h2>Action</h2>
+<p>I first broke the triage process into individual functional steps rather than treating it as one large script.</p>
+<p>I identified the information each step would require, where that information originated, and what type of access would theoretically be necessary to retrieve it.</p>
+<p>I then began mapping the workflow according to security and access requirements.</p>
+<p>For each component, I considered questions such as:</p>
+<ul>
+<li>Does the workflow only need to read information?</li>
+<li>Does the data already have an approved query mechanism?</li>
+<li>Would an API be required?</li>
+<li>What authentication method would an application use?</li>
+<li>Would technician credentials ever be appropriate, or should a dedicated service identity be required?</li>
+<li>Which permissions should intentionally not be granted?</li>
+<li>What information would need to be sanitized before being used in demonstrations or documentation?</li>
+<li>What portions of the workflow could be prototyped using mock data without accessing production systems?</li>
+</ul>
+<p>I deliberately approached ACLs and security restrictions as <strong>design requirements rather than obstacles</strong>.</p>
+<p>Instead of asking:</p>
+<p><strong>“How do I get around this restriction?”</strong></p>
+<p>I framed the engineering question as:</p>
+<p><strong>“What is the approved path through this control?”</strong></p>
+<p>I also began structuring the design so that the lowest privilege level possible would be used.</p>
+<p>Where the workflow only needed information for diagnosis, I favored a <strong>read-only architecture</strong>. The script would gather and normalize diagnostic information for a technician while leaving operational decisions and potentially destructive actions under human control.</p>
+<p>I also separated the project into layers:</p>
+<p><strong>Data acquisition → normalization → analysis → recommendation → technician decision</strong></p>
+<p>This allowed me to identify which portions could potentially be automated safely without allowing the script to independently modify production infrastructure.</p>
+<p>Finally, I prepared the project so that it could be explained at several levels if an engineering, management, or security discussion occurred unexpectedly.</p>
+<p>The project documentation could answer:</p>
+<ul>
+<li>What problem am I solving?</li>
+<li>How does the workflow operate?</li>
+<li>What have I already built or reconstructed?</li>
+<li>What security controls have I identified?</li>
+<li>What permissions would be required?</li>
+<li>What can be prototyped without production access?</li>
+<li>What organizational approvals would be needed to continue?</li>
+</ul>
+</section>
+
+<section class="card">
+<span class="eyebrow">Result</span>
+<h2>Result</h2>
+<p>The project evolved from a scripting exercise into a systems-engineering exercise.</p>
+<p>Instead of focusing exclusively on whether I could automate the triage process, I developed a clearer understanding of what would be necessary to implement automation responsibly inside a controlled production environment.</p>
+<p>The work demonstrated several areas of growth:</p>
+<ul>
+<li>Workflow decomposition</li>
+<li>Linux and shell comprehension</li>
+<li>Python and structured-data processing</li>
+<li>API architecture</li>
+<li>Authentication and authorization concepts</li>
+<li>Least-privilege design</li>
+<li>ACL awareness</li>
+<li>Security-boundary identification</li>
+<li>Human-in-the-loop automation</li>
+<li>Production-risk awareness</li>
+<li>Change-control thinking</li>
+<li>Technical documentation</li>
+</ul>
+<p>Most importantly, I recognized that <strong>technical capability does not equal authorization</strong>. A production-quality solution has to satisfy both.</p>
+<p>The resulting architecture therefore emphasizes a controlled, read-oriented diagnostic assistant rather than an autonomous system making infrastructure changes.</p>
+<p>The project remains a proof of concept pending the appropriate access, security review, and organizational approval, but the engineering path is now substantially clearer.</p>
+</section>
+
+<section class="card">
+<span class="eyebrow">Leadership / Engineering Takeaway</span>
+<h2>Leadership / Engineering Takeaway</h2>
+<p>This project represents a change in the way I approach technical problems.</p>
+<p>Early in my data-center experience, my primary question was:</p>
+<p><strong>“How do I fix this ticket?”</strong></p>
+<p>Later it became:</p>
+<p><strong>“How does this system work?”</strong></p>
+<p>This project pushed that thinking another level:</p>
+<p><strong>“How could we make the process better, and what would have to be true for that improvement to operate safely at production scale?”</strong></p>
+<p>That distinction — between being able to create something and understanding how it could responsibly exist inside an enterprise environment — is the most important result of the project.</p>
+<p class="tags">Automation • Python • JSON • Linux • Security • ACLs • Least Privilege • Human-in-the-Loop • Systems Engineering</p>
+<p class="note">Public portfolio version. Company-sensitive names, identifiers, commands, and implementation details are intentionally omitted.</p>
+</section>
+
+<p class="back"><a href="star-index.html">← Back to STAR Story Portfolio</a></p>
+
+</div>
+<div class="footer">© 2026 Created by Don Goins — IT Systems & Infrastructure Specialist</div>
+</body>
+</html>

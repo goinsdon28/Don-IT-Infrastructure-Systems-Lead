@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STAR Story 13: Moxa Replacement for the OSR Tower | Don Goins</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>STAR Story 13: Moxa Replacement for the OSR Tower</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="star-index.html">STAR Stories</a>
+        <a href="journal-index.html">Triage Journal</a>
+    </nav>
+</header>
+
+<div class="container">
+
+<section class="card">
+<span class="eyebrow">Situation</span>
+<h2>Situation</h2>
+<p>
+At Avon, the KNAPP OSR automated inventory and storage system depended on a legacy Moxa NPort W2150 Plus
+wireless serial device server for communication. When the device stopped communicating back to the stack,
+the failure affected an established production architecture that had been operating on older hardware.
+</p>
+<p>
+A simple “replace it with the newest model” approach carried compatibility risk. Restoring service required
+understanding not only that the device had failed, but also which replacement would preserve the interfaces
+and behavior expected by the existing system.
+</p>
+</section>
+
+<section class="card">
+<span class="eyebrow">Task</span>
+<h2>Task</h2>
+<p>
+My responsibility was to restore communication without creating a second problem through an incompatible
+upgrade. I needed to identify a replacement that fit the existing architecture, minimize disruption, and
+return the OSR communication path to service.
+</p>
+</section>
+
+<section class="card">
+<span class="eyebrow">Action</span>
+<h2>Action</h2>
+<p>
+I treated the issue as both a hardware failure and a compatibility problem. Rather than assuming the newest
+available device was automatically the correct choice, I compared the role of the failed Moxa device against
+the requirements of the existing OSR environment.
+</p>
+<p>
+We identified an older compatible Moxa replacement that could still operate within the architecture Avon was
+using. The failed device was replaced, the replacement was brought into the existing communication path, and
+the result was validated at the system level by confirming that communication returned through the OSR stack.
+</p>
+</section>
+
+<section class="card">
+<span class="eyebrow">Result</span>
+<h2>Result</h2>
+<p>
+After the replacement, the device began communicating back to the stack and the OSR communication path was
+restored without forcing a broader architecture change.
+</p>
+<p>
+The solution restored the required function while avoiding the additional risk, cost, and disruption that
+could have come from introducing a newer but incompatible device into a legacy production system.
+</p>
+</section>
+
+<section class="card">
+<h2>Engineering Takeaway</h2>
+<p>
+Compatibility can be more important than novelty. In production environments, the best replacement is not
+automatically the newest hardware; it is the hardware that satisfies the technical constraints, restores
+service reliably, and introduces the least operational risk.
+</p>
+<p>
+The experience also reinforced the importance of validating recovery at the system level rather than treating
+a successful power-on as proof that the problem is solved.
+</p>
+<p class="tags">Legacy Infrastructure • Hardware Compatibility • Production Recovery • Root Cause Reasoning • OSR Systems</p>
+<p class="note">Public portfolio version. Company-sensitive configuration details and internal implementation information are intentionally omitted.</p>
+</section>
+
+<p class="back"><a href="star-index.html">← Back to STAR Story Portfolio</a></p>
+
+</div>
+<div class="footer">© 2026 Created by Don Goins — IT Systems & Infrastructure Specialist</div>
+</body>
+</html>
