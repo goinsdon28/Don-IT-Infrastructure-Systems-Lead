@@ -1,154 +1,679 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>14-Week Data Center Triage Journal | Don Goins</title>
-<link rel="stylesheet" href="style.css">
+
+<title>Data Center Triage Journal | Don Goins</title>
+
+<link rel="stylesheet" href="../assets/style.css">
 </head>
+
 <body>
+
 <header>
-    <h1>14-Week Data Center Triage Journal</h1>
-    <p>A sanitized progression through diagnostics • resolution • mentoring • technical leadership</p>
-    
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="star-index.html">STAR Stories</a>
-            <a href="journal-index.html">Triage Journal</a>
-</nav>
-        
+
+    <h1>Data Center Triage Journal</h1>
+
+    <p>
+        A sanitized progression through diagnostics • resolution • mentoring •
+        technician development • technical leadership
+    </p>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../star-stories/index.html">STAR Stories</a>
+        <a href="../triage-journal/index.html">Triage Journal</a>
+        <a href="../game-1/index.html">Launch Mini Game</a>
+    </nav>
+
 </header>
+
+
 <div class="container">
 
+
+<!-- INTRODUCTION -->
+
 <section class="card">
+
 <h2>14 Weeks of Progression</h2>
+
 <p>
-This journal documents a progression from learning a large-scale data-center environment to independent diagnostics,
-complex ticket ownership, mentoring, and technician training. It is intentionally written as a public portfolio artifact,
-not as an internal operating guide.
+This journal documents my progression from entering an unfamiliar
+large-scale data-center environment to independent diagnostics,
+complex ticket ownership, mentoring, formal technician instruction,
+and technical leadership.
 </p>
-<p class="note">
-All identifying infrastructure details, internal commands, tool names, ticket identifiers, facility names, and proprietary procedures are removed or generalized.
+
+<p>
+It was written while the progression was actually happening.
 </p>
+
+<p>
+The journal was not created afterward to make the path look cleaner,
+faster, or more predictable than it really was.
+</p>
+
+<p>
+The progression can be summarized as:
+</p>
+
+<blockquote>
+    <strong>
+        Observe → Learn → Diagnose → Resolve → Validate → Teach → Improve → Lead
+    </strong>
+</blockquote>
+
+<p>
+The public version is intentionally sanitized.
+Internal systems, identifying infrastructure information,
+customer-sensitive data, and proprietary processes have been removed
+or generalized.
+</p>
+
 </section>
 
-<section class="phase">
-<h2>Foundation — Weeks 1–3</h2>
-<div class="grid">
-    <a class="link-card" href="week-01.html">
-      <span class="eyebrow">Week 1</span>
-      <h3>Foundation: Environment & Safety</h3>
-      <p>Focused on learning the physical environment, ticket flow, safe handling, and the difference between observation and evidence.</p>
-      <strong>Read Week 1 →</strong>
-    </a>
-    
-    <a class="link-card" href="week-02.html">
-      <span class="eyebrow">Week 2</span>
-      <h3>Foundation: Fiber & Physical Triage</h3>
-      <p>Expanded into fiber and connectivity work.</p>
-      <strong>Read Week 2 →</strong>
-    </a>
-    
-    <a class="link-card" href="week-03.html">
-      <span class="eyebrow">Week 3</span>
-      <h3>Foundation: End-to-End Ticket Reasoning</h3>
-      <p>Moved from isolated actions toward complete triage: understand the symptom, inspect device health, verify physical state, compare expected versus observed behavior, then decide whether to resolve, continue, or escalate.</p>
-      <strong>Read Week 3 →</strong>
-    </a>
-    </div>
+
+
+<!-- FOUNDATION -->
+
+<section class="card">
+
+<h2>Phase I — Foundation</h2>
+
+<p>
+The first three weeks were about understanding the environment,
+learning the tools, developing safe habits, and moving from observation
+toward independent ownership.
+</p>
+
 </section>
 
-<section class="phase">
-<h2>Independence — Weeks 4–7</h2>
-<div class="grid">
-    <a class="link-card" href="week-04.html">
-      <span class="eyebrow">Week 4</span>
-      <h3>Independent Ticket Ownership</h3>
-      <p>Began owning more tickets independently and working across both ends of connectivity issues.</p>
-      <strong>Read Week 4 →</strong>
-    </a>
-    
-    <a class="link-card" href="week-05.html">
-      <span class="eyebrow">Week 5</span>
-      <h3>Mentoring While Building Speed</h3>
-      <p>Balanced personal ticket work with helping teammates learn CLI triage and structured troubleshooting.</p>
-      <strong>Read Week 5 →</strong>
-    </a>
-    
-    <a class="link-card" href="week-06.html">
-      <span class="eyebrow">Week 6</span>
-      <h3>Backlog Reduction & Repetition</h3>
-      <p>Used repeated exposure to similar fault classes to improve pattern recognition while avoiding assumptions.</p>
-      <strong>Read Week 6 →</strong>
-    </a>
-    
-    <a class="link-card" href="week-07.html">
-      <span class="eyebrow">Week 7</span>
-      <h3>Advanced Hardware Diagnostics</h3>
-      <p>Worked through more complex power, fan, management, and connectivity cases.</p>
-      <strong>Read Week 7 →</strong>
-    </a>
-    </div>
+
+<section class="card">
+
+<h3>Week 1 — Entering the Data Center</h3>
+
+<p>
+The first week focused on understanding an unfamiliar large-scale
+data-center environment: hardware, terminology, workflow, ticketing,
+fiber, tooling, and operational expectations.
+</p>
+
+<p>
+The goal was simple:
+<strong>observe carefully, learn quickly, and avoid creating additional problems.</strong>
+</p>
+
+<p>
+<a href="week-01.html">
+    Read Week 1 — Entering the Data Center →
+</a>
+</p>
+
 </section>
 
-<section class="phase">
-<h2>Advanced Diagnostics — Weeks 8–10</h2>
-<div class="grid">
-    <a class="link-card" href="week-08.html">
-      <span class="eyebrow">Week 8</span>
-      <h3>Topology & Connectivity Reasoning</h3>
-      <p>Handled cases where physical connectivity did not match expected topology.</p>
-      <strong>Read Week 8 →</strong>
-    </a>
-    
-    <a class="link-card" href="week-09.html">
-      <span class="eyebrow">Week 9</span>
-      <h3>Diagnostics + Teaching</h3>
-      <p>Combined advanced troubleshooting with live coaching.</p>
-      <strong>Read Week 9 →</strong>
-    </a>
-    
-    <a class="link-card" href="week-10.html">
-      <span class="eyebrow">Week 10</span>
-      <h3>Provisioning, Switches & Component Isolation</h3>
-      <p>Expanded into provisioning-related network issues, switch replacement workflow, supervisor/component failures, and fault isolation.</p>
-      <strong>Read Week 10 →</strong>
-    </a>
-    </div>
+
+<section class="card">
+
+<h3>Week 2 — Building the Foundation</h3>
+
+<p>
+The second week moved from basic observation toward understanding
+how the environment fit together.
+</p>
+
+<p>
+Tool use, fiber handling, ticket context, CLI interaction,
+and evidence collection began forming a repeatable troubleshooting foundation.
+</p>
+
+<p>
+<a href="week-02.html">
+    Read Week 2 — Building the Foundation →
+</a>
+</p>
+
 </section>
 
-<section class="phase">
-<h2>Technical Leadership — Weeks 11–14</h2>
-<div class="grid">
-    <a class="link-card" href="week-11.html">
-      <span class="eyebrow">Week 11</span>
-      <h3>Visibility, Throughput & Leadership</h3>
-      <p>By this point the work had shifted from simply completing tickets to influencing team effectiveness.</p>
-      <strong>Read Week 11 →</strong>
-    </a>
-    
-    <a class="link-card" href="week-12.html">
-      <span class="eyebrow">Week 12</span>
-      <h3>From Technician to Technical Leader</h3>
-      <p>This week centered on applying the process to others: formal and informal training, hands-off retention checks, complex ticket ownership, and documenting a reusable readiness curriculum.</p>
-      <strong>Read Week 12 →</strong>
-    </a>
 
-    <a class="link-card" href="week-13.html">
-      <span class="eyebrow">Week 13</span>
-      <h3>Foundation: Environment: & Safety</h3>
-      <p>The 13 week centered on applying the process to others: formal and informal training, hands-off retention checks, complex ticket ownership, and documenting a reusable readiness curriculum.</p>
-      <strong>Read Week 13 →</strong>
-    </a>
+<section class="card">
 
-    <a class="link-card" href="week-14.html">
-      <span class="eyebrow">Week 14</span>
-      <h3>Week 14 — From Technician to Instructor</h3>
-      <p>Week 14 began with an expectation that I would continue developing the technical and security concepts surrounding my triage-script project while providing some informal technician mentoring.</p>
-      <strong>Read Week 14 →</strong>
-    </a>
+<h3>Week 3 — From Observation to Ownership</h3>
+
+<p>
+By Week 3, the objective was no longer simply watching other technicians.
+</p>
+
+<p>
+Independent ticket ownership began replacing observation as diagnostic
+confidence increased.
+</p>
+
+<p>
+The focus shifted toward forming hypotheses, gathering evidence,
+taking justified action, and documenting the result.
+</p>
+
+<p>
+<a href="week-03.html">
+    Read Week 3 — From Observation to Ownership →
+</a>
+</p>
+
+</section>
+
+
+
+<!-- INDEPENDENCE -->
+
+<section class="card">
+
+<h2>Phase II — Independence & Team Effect</h2>
+
+<p>
+Weeks 4 through 7 marked the transition from becoming independently
+productive to beginning to influence the effectiveness of technicians
+working around me.
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h3>Week 4 — Teaching What I Just Learned</h3>
+
+<p>
+Technical learning began turning outward.
+</p>
+
+<p>
+As I became more comfortable with the environment, technicians began
+shadowing my work and asking questions about the CLI, troubleshooting,
+and ticket workflow.
+</p>
+
+<p>
+Teaching became another way of testing whether I actually understood
+what I had learned.
+</p>
+
+<p>
+<a href="week-04.html">
+    Read Week 4 — Teaching What I Just Learned →
+</a>
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h3>Week 5 — Resolution Over Activity</h3>
+
+<p>
+The focus shifted away from simply touching tickets and toward producing
+defensible technical resolutions.
+</p>
+
+<p>
+The objective became:
+<strong>understand the problem, perform the correct work, and leave the ticket
+better than I found it.</strong>
+</p>
+
+<p>
+<a href="week-05.html">
+    Read Week 5 — Resolution Over Activity →
+</a>
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h3>Week 6 — Scale and Team Effect</h3>
+
+<p>
+Higher ticket volume created a different challenge:
+maintaining diagnostic quality while increasing operational output.
+</p>
+
+<p>
+The week also reinforced that individual productivity can scale when
+knowledge is shared instead of protected.
+</p>
+
+<p>
+<a href="week-06.html">
+    Read Week 6 — Scale and Team Effect →
+</a>
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h3>Week 7 — Diagnostic Depth</h3>
+
+<p>
+The troubleshooting became more complex.
+</p>
+
+<p>
+Power conditions, management-state anomalies, fiber paths,
+missing components, and contradictory system evidence required more
+careful separation of symptoms from root causes.
+</p>
+
+<p>
+<a href="week-07.html">
+    Read Week 7 — Diagnostic Depth →
+</a>
+</p>
+
+</section>
+
+
+
+<!-- ADVANCED DIAGNOSTICS -->
+
+<section class="card">
+
+<h2>Phase III — Advanced Diagnostics</h2>
+
+<p>
+Weeks 8 through 10 moved beyond basic ticket execution into deeper
+technical judgment, evidence-driven troubleshooting, and systems-level
+thinking.
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h3>Week 8 — Judgment and Advancement</h3>
+
+<p>
+Technical maturity increasingly meant knowing not only
+<strong>what could be done</strong>, but <strong>what should be done next</strong>.
+</p>
+
+<p>
+Ticket prioritization, SLA awareness, topology verification,
+and diagnostic judgment became increasingly important.
+</p>
+
+<p>
+<a href="week-08.html">
+    Read Week 8 — Judgment and Advancement →
+</a>
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h3>Week 9 — Mentorship and Advanced Diagnostics</h3>
+
+<p>
+Mentoring became more deliberate while diagnostic work continued to deepen.
+</p>
+
+<p>
+Technicians were guided through health checks, power conditions,
+ticket documentation, escalation decisions, and the reasoning required
+to distinguish a real hardware failure from a misleading symptom.
+</p>
+
+<p>
+<a href="week-09.html">
+    Read Week 9 — Mentorship and Advanced Diagnostics →
+</a>
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h3>Week 10 — Systems-Level Troubleshooting</h3>
+
+<p>
+The work increasingly required understanding relationships between
+hardware, provisioning, firmware, interfaces, inventory systems,
+and operational state.
+</p>
+
+<p>
+The question was becoming less:
+<strong>“Which part should I replace?”</strong>
+</p>
+
+<p>
+And more:
+<strong>“What evidence proves where the failure actually exists?”</strong>
+</p>
+
+<p>
+<a href="week-10.html">
+    Read Week 10 — Systems-Level Troubleshooting →
+</a>
+</p>
+
+</section>
+
+
+
+<!-- TECHNICAL LEADERSHIP -->
+
+<section class="card">
+
+<h2>Phase IV — Technical Leadership</h2>
+
+<p>
+Weeks 11 through 14 document the point where the work began shifting
+from individual technical execution toward multiplying the capability
+of other technicians.
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h3>Week 11 — Watch Don</h3>
+
+<p>
+Mentoring and technical support became increasingly visible.
+</p>
+
+<p>
+Multiple technicians were being coached through live troubleshooting,
+while increasingly complex investigations continued in parallel.
+</p>
+
+<p>
+The week became evidence that technical influence did not require
+formal authority.
+</p>
+
+<p>
+<a href="week-11.html">
+    Read Week 11 — Watch Don →
+</a>
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h3>Week 12 — From Technician to Technical Leader</h3>
+
+<p>
+The transition from informal mentoring toward deliberate technician
+development became clearer.
+</p>
+
+<p>
+Technicians were no longer simply watching troubleshooting.
+They were being taught how to discover documentation, reason through
+evidence, explain their conclusions, and eventually operate independently.
+</p>
+
+<p>
+This week also began shaping a larger training concept:
+</p>
+
+<blockquote>
+    <strong>
+        Assess → Normalize → Train → Validate
+    </strong>
+</blockquote>
+
+<p>
+<a href="week-12.html">
+    Read Week 12 — From Technician to Technical Leader →
+</a>
+</p>
+
+</section>
+
+
+
+<!-- WEEK 13 -->
+
+<section class="card">
+
+<h3>Week 13 — Measurable Team Impact</h3>
+
+<p>
+By Week 13, the journal had become more than a record of individual
+ticket work.
+</p>
+
+<p>
+It had become evidence of progression:
+from learning the environment, to independent diagnostics,
+to preventing incorrect repair paths, building evidence-based escalations,
+mentoring technicians, and developing a repeatable training philosophy.
+</p>
+
+<p>
+The question changed.
+</p>
+
+<blockquote>
+    <strong>
+        Not simply: What have I learned?
+    </strong>
+</blockquote>
+
+<p>
+But instead:
+</p>
+
+<blockquote>
+    <strong>
+        What measurable effect is that learning beginning to have
+        on the people and systems around me?
+    </strong>
+</blockquote>
+
+<p>
+<strong>Theme:</strong>
+Turning technical growth into measurable evidence of readiness
+for greater responsibility.
+</p>
+
+<p>
+<a href="week-13.html">
+    Read Week 13 — Measurable Team Impact →
+</a>
+</p>
+
+</section>
+
+
+
+<!-- WEEK 14 -->
+
+<section class="card">
+
+<h3>Week 14 — From Technician to Instructor</h3>
+
+<p>
+Week 14 began with the expectation of continued technical work,
+development of the triage-script concept, and informal mentoring.
+</p>
+
+<p>
+Instead, I found myself conducting formal classroom training,
+coaching technicians on the data-center floor,
+adapting instruction to different skill paths,
+remediating knowledge gaps,
+and beginning to train leads.
+</p>
+
+<blockquote>
+    <strong>
+        “You're not diagnosing a ticket.
+        You're diagnosing a problem.”
+    </strong>
+</blockquote>
+
+<p>
+Ten technicians entered training at different points in their development.
+</p>
+
+<ul>
+    <li>
+        <strong>7 of 10</strong> progressed to independently closing
+        multiple tickets.
+    </li>
+
+    <li>
+        <strong>2 technicians</strong> requiring additional development
+        successfully progressed and closed tickets the same day.
+    </li>
+
+    <li>
+        <strong>3 leads</strong> began participating in the training process.
+    </li>
+</ul>
+
+<p>
+The week also became the strongest real-world validation yet of:
+</p>
+
+<blockquote>
+    <strong>
+        Assess → Normalize → Train → Validate
+    </strong>
+</blockquote>
+
+<p>
+The measure of progress had changed again.
+</p>
+
+<p>
+I was no longer evaluating success only by the problems I could solve myself.
+</p>
+
+<p>
+I was beginning to measure success by whether I could teach someone else
+to reason through those problems without me.
+</p>
+
+<p>
+<strong>Theme:</strong>
+The transition from solving technical problems personally
+to developing technicians who can solve them independently.
+</p>
+
+<p>
+<a href="week-14.html">
+    Read Week 14 — From Technician to Instructor →
+</a>
+</p>
+
+</section>
+
+
+
+<!-- CHECKPOINT -->
+
+<section class="card">
+
+<h2>The Six-Month Checkpoint</h2>
+
+<p>
+This journal began as a way to document whether I could successfully
+grow into an unfamiliar large-scale data-center environment.
+</p>
+
+<p>
+But there was always another question underneath it.
+</p>
+
+<p>
+Could that development eventually lead to greater responsibility,
+formal advancement,
+or a more substantial contribution to the organization?
+</p>
+
+<p>
+The first fourteen weeks document the preparation.
+</p>
+
+<p>
+What happened afterward was still unknown when this page was written.
+</p>
+
+<div style="text-align:center; margin-top:2rem; margin-bottom:2rem;">
+
+    <h3>Did I get the job?</h3>
+
+    <h3>Did the opportunity become something larger?</h3>
+
+    <h3>Did the training work develop into something permanent?</h3>
+
+    <h3>Did another opportunity change the direction entirely?</h3>
+
+    <br>
+
+    <h2>Was all of this worth it?</h2>
+
 </div>
+
+<p style="text-align:center;">
+
+    <a href="six-month-checkpoint.html">
+        <strong>Continue to The Six-Month Checkpoint →</strong>
+    </a>
+
+</p>
+
 </section>
+
+
+
+<!-- CLOSING -->
+
+<section class="card">
+
+<h2>The Journey Continues</h2>
+
+<p>
+This journal was written while the journey was happening,
+not reconstructed afterward once the outcome was already known.
+</p>
+
+<blockquote>
+    <strong>
+        The next chapter will not rewrite the prediction.
+        It will record what actually happened.
+    </strong>
+</blockquote>
+
+<p style="text-align:center;">
+    <strong>To Be Continued...</strong>
+</p>
+
+</section>
+
+
+</div>
+
+</body>
+</html>
 
 </div>
 <div class="footer">© 2026 Created by Don Goins — IT Systems & Infrastructure Specialist</div>
